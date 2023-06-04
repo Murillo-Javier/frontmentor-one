@@ -125,6 +125,29 @@
         border: 2px solid hsl(0, 0%, 41%);
     }
 
+    @media only screen and (max-width: 750px) {
+        header {
+            padding: 15px;
+            align-items: center;
+            ul {
+                li {
+                    padding: 5px;
+                }
+            }
+        }
+        .navbar {
+            gap: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .navbar-menu {
+            display: none;
+        }
+        .log-btn {
+        display: none;
+        }
+    }
         /* Main */
         main {
             gap: 200px;
@@ -158,6 +181,42 @@
                 background: hsl(0, 0%, 8%);
             }
         }
+
+@media only screen and (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .info {
+        align-items: center
+    }
+    .info h1 {
+        font-size: 3rem;
+    }
+    .info p {
+        display: flex;
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    main {
+        gap: 10px;
+        margin-top: 40px;
+        img {
+            width: 250px;
+        }
+    }
+    .info {
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    main {
+        gap: 20px;
+    }
+}
 
         .marcas {
             display: flex;
