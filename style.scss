@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Epilogue:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+    /* Feel free to remove these styles or customise in your own stylesheet 👍 */
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        a {
+            color: hsl(0, 0%, 8%);
+        }
+    }
+
+    body {
+        font-family: 'Epilogue';
+        background-color: hsl(0, 0%, 98%);
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        justify-content: space-between;
+        ul {
+            display: flex;
+            gap: 10px;
+            button {
+                gap: 10px;
+                font-size: 17px;
+                border: none;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                color: hsl(0, 0%, 41%);
+                background-color: transparent;
+            }
+            li {
+                gap: 10px;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                color: hsl(0, 0%, 41%);
+                a {
+                    color: hsl(0, 0%, 41%);
+                    &:hover {
+                        color: hsl(0, 0%, 8%);
+                    }
+                }
+            }
+        }
+    }
+
+    #down-features {
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            color: hsl(0, 0%, 8%);
+        }
+    }
+
+    .features {
+        top: 40px;
+        right: 0;
+        display: none;
+        padding:0 15px;
+        position: absolute;
+        background: #fff;
+        border-radius: 10px;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        li {
+            color: hsl(0, 0%, 8%);
+        }
+    }
+
+    #down-company {
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            color: hsl(0, 0%, 8%);
+        }
+    }
+
+    .company {
+        top: 40px;
+        left: 0;
+        display: none;
+        padding:0 15px;
+        background: #fff;
+        position: absolute;
+        border-radius: 10px;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        li {
+            color: hsl(0, 0%, 8%);
+        }
+    }
+
+    .navbar {
+        display: flex;
+        gap: 35px;
+    }
+    .login-btn {
+        width: 100px;
+        border: none;
+        padding: 12px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: transparent;
+        color: hsl(0, 0%, 41%);
+    }
+    .register-btn {
+        width: 100px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 12px;
+        color: hsl(0, 0%, 41%);
+        background-color: transparent;
+        border: 2px solid hsl(0, 0%, 41%);
+    }
+
+        /* Main */
+        main {
+            gap: 200px;
+            display: flex;
+            margin-bottom: 40px;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 350px;
+            }
+        }
+        .info {
+            gap: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            h1 {
+                font-size: 4rem;
+            }
+            p {
+                width: 420px;
+                line-height: 1.4rem;
+            }
+            button {
+                width: 120px;
+                border: none;
+                color: #fff;
+                padding: 12px;
+                cursor: pointer;
+                border-radius: 10px;
+                background: hsl(0, 0%, 8%);
+            }
+        }
+
+        .marcas {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
