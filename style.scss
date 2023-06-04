@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Epilogue:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
     /* Feel free to remove these styles or customise in your own stylesheet 👍 */
 
+$dark: #141414;
+$gray: #696969;
+$white: #fafafa;
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -12,19 +16,18 @@
     text-decoration: none;
     box-sizing: border-box;
     a {
-        color: hsl(0, 0%, 8%);
+        color: $dark;
     }
 }
 
 body {
     font-family: 'Epilogue';
-    background-color: hsl(0, 0%, 98%);
+    background: $white;
 }
 
     /* Header */
 header {
     display: flex;
-    flex-wrap: wrap;
     padding: 20px;
     justify-content: space-between;
     ul {
@@ -37,7 +40,7 @@ header {
             padding: 10px;
             display: flex;
             align-items: center;
-            color: hsl(0, 0%, 41%);
+            color: $gray;
             background-color: transparent;
         }
         li {
@@ -45,22 +48,22 @@ header {
             padding: 10px;
             display: flex;
             align-items: center;
-            color: hsl(0, 0%, 41%);
+            color: $gray;
             a {
-                color: hsl(0, 0%, 41%);
+                color: $gray;
                 &:hover {
-                    color: hsl(0, 0%, 8%);
+                    color: $dark;
                 }
             }
         }
     }
 }
 
-#don-features {
+#down-features {
     cursor: pointer;
     position: relative;
     &:hover {
-        color: hsl(0, 0%, 8%);
+        color: $dark;
     }
 }
 
@@ -75,7 +78,7 @@ header {
     flex-direction: column;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     li {
-        color: hsl(0, 0%, 8%);
+        color: $dark;
     }
 }
 
@@ -83,7 +86,7 @@ header {
     cursor: pointer;
     position: relative;
     &:hover {
-        color: hsl(0, 0%, 8%);
+        color: $dark;
     }
 }
 
@@ -98,14 +101,22 @@ header {
         flex-direction: column;
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
     li {
-        color: hsl(0, 0%, 8%);
+        color: $dark;
     }
 }
 
 .navbar {
-    display: flex;
     gap: 35px;
+    width: 100%;
+    display: flex;
 }
+
+#navbar-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .login-btn {
     width: 100px;
     border: none;
@@ -113,17 +124,18 @@ header {
     cursor: pointer;
     border-radius: 10px;
     background-color: transparent;
-    color: hsl(0, 0%, 41%);
+    color: $gray;
 }
 .register-btn {
     width: 100px;
     padding: 10px;
     cursor: pointer;
     border-radius: 12px;
-    color: hsl(0, 0%, 41%);
+    color: $gray;
     background-color: transparent;
-    border: 2px solid hsl(0, 0%, 41%);
+    border: 2px solid $gray;
 }
+
 
 @media only screen and (max-width: 750px) {
     header {
@@ -141,11 +153,51 @@ header {
 }
 
 @media only screen and (max-width: 600px) {
-    .navbar-menu {
+    header ul {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    #mobile-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navbar-menu {
+        right: 0;
+        top: 60px;
+        gap: 20px;
+        width: 300px;
+        display: flex;
+        padding: 20px;
+        height: 100vh;
+        position: absolute;
+        flex-direction: column;
+        justify-content: normal;
+        background: #fafafa;
         display: none;
     }
     .log-btn {
-    display: none;
+        //display: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .register-btn {
+        width: 150px;
+    }
+    #menu-hamburger {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .log-btn {
+        display: flex;
+        
+    }
+    #menu-hamburger {
+        display: none;
     }
 }
 
@@ -181,7 +233,7 @@ main {
         padding: 12px;
         cursor: pointer;
         border-radius: 10px;
-        background: hsl(0, 0%, 8%);
+        background: $dark;
     }
 }
 
@@ -237,9 +289,6 @@ main {
 @media only screen and (max-width: 880px) {
     main {
         gap: 20px;
-    }
-    .image-hero-mobile {
-        width: 100%;
     }
 }
 

@@ -22,3 +22,13 @@ company.addEventListener("click", (event) => {
     }
 });
 
+const hamburger = document.getElementById("menu-hamburger");
+const menu = document.getElementById("navbar-menu");
+
+hamburger.addEventListener("click", (event) => {
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+});
